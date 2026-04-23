@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonte-bebasneue/BebasNeue-Regular.woff2') format('woff2'),
+        url('fonte-bebasneue/BebasNeue-Regular.woff') format('woff'),
+        url('fonte-bebasneue/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mollen';
+    src: url('fonte-mollen/Mollen Trial-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mollen';
+    src: url('fonte-mollen/Mollen Trial-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+  font-family: 'Mollen', sans-serif;
+    background-color: #291003;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: #000000;
+    margin-bottom: 100px;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    
+}
+nav a:hover {
+    color: #771c00;
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+.logo h2 {
+    margin: 0 0 0 -20px;
+    font-size: 2.5em;
+    /* A fonte Bebas Neue é alta mas fininha, por isso aumenta-se o valor */
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding-right: 100px;
+}
+
+.destaque-localizacao,.destaque{
+   color: #FF4400;
+}
+
+
+.mapa{
+    display: flex;
+    justify-content: center;
+}
+.container-mapa{
+    max-width: 100%;
+    width: 60%;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+a.botao-mapa{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 20px;
+    
+}
+    
+.cor-botao{
+    background-color: #FF4400;
+    padding: 5px 5px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    
+    
+}
+.cor-botao:hover{
+    background-color:#b42a00; 
+    border-color: #b42a00;
+    
+}
+.letra-botao{
+   color: white;
+   margin: 15px;
+   font-size: 15px;
+   font-family: 'Mollen', sans-serif;
+   font-weight: bold;
+}
+footer{
+   background-color: black;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
