@@ -102,43 +102,35 @@ nav a:hover {
     margin-top: 50px;
     border-radius: 5px;
 }
-
-a.botao-mapa{
+.container-botao {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+}
+.botao-mapa {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    padding: 20px;
-    
-}
-    
-.cor-botao{
+    padding: 15px 25px;
     background-color: #FF4400;
-    padding: 5px 5px;
-    width: auto;
-    height: auto;
     border-radius: 20px;
-    border: none;
     cursor: pointer;
-    
-    
+    color: white;
+    font-size: 15px;
+    font-family: 'Mollen', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
 }
-.cor-botao:hover{
-    background-color:#b42a00; 
-    border-color: #b42a00;
-    
-}
-.letra-botao{
-   color: white;
-   margin: 15px;
-   font-size: 15px;
-   font-family: 'Mollen', sans-serif;
-   font-weight: bold;
+
+.botao-mapa:hover {
+    background-color: #b42a00;
 }
 footer{
-   background-color: black;
-    width: 100%;
     text-align: center;
-    color: white;
-    margin: 0;
+    color: #ffffff;
+    margin-top: 80px;
+    margin-bottom: 0;
+    background-color: #000000;
+    padding: 40px 40px;
 }
+
