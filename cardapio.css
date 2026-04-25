@@ -107,6 +107,20 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+.bt-pedir{
+    display: inline-block;
+    background-color: #FF4400;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
 footer {
     text-align: center;
     color: #ffffff;
