@@ -22,9 +22,32 @@
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="delivery.html">Delivery</a></li>
                 <li><a href="localizacao.html">Localização</a></li>
+                <li class="cart-item-nav">
+                    <button class="cart-open-btn">
+                        CARRINHO 🛒 <span id="cart-count">0</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
+    
+    
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Pedido</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+    
+        <ul class="cart-items"></ul>
+    
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Pedido</button>
+        </div>
+    </aside>
     <main class="hero-main">
         <div class="card">
             <h1 class="title-cardapio">CARDAPIO COMPLETO</h1> 
@@ -39,7 +62,7 @@
                         </h3>
                         <p>Mussarela, Calabresa fatiada, e Cebola</p>
                     </div>
-                    <button class="bt-pedir">
+                    <button class="bt-pedir" data-nome="Pizza de Calabresa" data-preco="45.50">
                         Pedir
                     </button>
                 </div>
@@ -82,7 +105,7 @@
                         </h3>
                         <p>350ml</p>
                     </div>
-                    <button class="bt-pedir">
+                    <button class="bt-pedir" data-nome="Refrigerante - Cola" data-preco="6.50">
                         Pedir
                     </button>
                 </div>

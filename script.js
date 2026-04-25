@@ -63,3 +63,77 @@ function loadHeader() {
 
 // Quando o navegador desenhar a página, jogue o menu e o javascript!
 document.addEventListener('DOMContentLoaded', loadHeader);
+
+
+// Fazendo ligação do carrinho com os pedidos 
+
+const cartSidebar = document.getElementById('cart-sidebar');
+const openBtn = document.querySelector('.cart-open-btn');
+const closeBtn = document.getElementById('close-cart');
+const cartList = document.querySelector('.cart-items');
+const cartTotalValue = document.getElementById('cart-total-value');
+const cartCountElement = document.getElementById('cart-count'); // O número no ícone
+const btnsPedir = document.querySelectorAll('.bt-pedir');
+
+let totalGeral = 0;
+let quantidadeItens = 0;
+
+// 1. O menu de finalizar pedido SÓ abre ao clicar no ícone do carrinho
+if (openBtn) {
+    openBtn.addEventListener('click', () => {
+        cartSidebar.classList.add('open');
+    });
+}
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        cartSidebar.classList.remove('open');
+    });
+}
+
+// 2. Adicionar itens ao carrinho 
+btnsPedir.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const nome = botao.getAttribute('data-nome');
+        const preco = parseFloat(botao.getAttribute('data-preco'));
+
+        if (!nome || isNaN(preco)) return;
+
+        // Criar item visual
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+        li.innerHTML = `
+            <div class="item-info">
+                <p>${nome}</p>
+                <span>R$ ${preco.toFixed(2).replace('.', ',')}</span>
+            </div>
+            <button class="remove-item">X</button>
+        `;
+
+        // Lógica de remover
+        li.querySelector('.remove-item').addEventListener('click', () => {
+            li.remove();
+            totalGeral -= preco;
+            quantidadeItens--; // Diminui o contador
+            atualizarInterface();
+        });
+
+        cartList.appendChild(li);
+        totalGeral += preco;
+        quantidadeItens++; // Aumenta o contador
+        atualizarInterface();
+        
+        
+    });
+});
+
+function atualizarInterface() {
+    if (totalGeral < 0) totalGeral = 0;
+    if (quantidadeItens < 0) quantidadeItens = 0;
+
+    // Atualiza o valor total no menu lateral
+    cartTotalValue.innerText = `R$ ${totalGeral.toFixed(2).replace('.', ',')}`;
+    
+    // Atualiza o número (0 para 1, etc) no ícone do cabeçalho
+    cartCountElement.innerText = quantidadeItens;
+}
