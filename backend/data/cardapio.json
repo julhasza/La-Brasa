@@ -1,0 +1,73 @@
+[
+  {
+    "categoria": "tradicionais",
+    "itens": [
+      {
+        "id": 1,
+        "nome": "Pizza de Calabresa",
+        "descricao": "Mussarela, calabresa fatiada e cebola.",
+        "preco": 45.5,
+        "imagem": "imagens/pizza1.jpg"
+      },
+      {
+        "id": 2,
+        "nome": "Pizza de Frango com Catupiry",
+        "descricao": "Mussarela, frango desfiado e catupiry.",
+        "preco": 47,
+        "imagem": "imagens/pizza2.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Pizza Portuguesa",
+        "descricao": "Mussarela, ovos cozidos, cebola, oregano e azeitonas.",
+        "preco": 48,
+        "imagem": "imagens/pizza3.jpg"
+      }
+    ]
+  },
+  {
+    "categoria": "doces",
+    "itens": [
+      {
+        "id": 4,
+        "nome": "Pizza de Chocolate",
+        "descricao": "Mussarela e chocolate derretido.",
+        "preco": 42,
+        "imagem": "imagens/pizza-chocolate.png"
+      },
+      {
+        "id": 5,
+        "nome": "Pizza de Banana",
+        "descricao": "Mussarela, banana caramelizada e canela.",
+        "preco": 43,
+        "imagem": "imagens/pizza-banana.png"
+      }
+    ]
+  },
+  {
+    "categoria": "bebidas",
+    "itens": [
+      {
+        "id": 6,
+        "nome": "Refrigerante - Cola",
+        "descricao": "350ml",
+        "preco": 6.5,
+        "imagem": "imagens/cocacola.png"
+      },
+      {
+        "id": 7,
+        "nome": "Refrigerante - Laranja",
+        "descricao": "350ml",
+        "preco": 6.5,
+        "imagem": "imagens/refri-laranja.png"
+      },
+      {
+        "id": 8,
+        "nome": "Refrigerante - Guarana",
+        "descricao": "350ml",
+        "preco": 6.5,
+        "imagem": "imagens/refri-guara.png"
+      }
+    ]
+  }
+]
