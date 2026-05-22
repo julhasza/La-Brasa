@@ -12,8 +12,6 @@
 <body>
     <div id="header-placeholder"></div>
     <main class="delivery-main">
-
-        <!-- COLUNA ESQUERDA: sugestão de bebidas -->
         <section class="coluna-esquerda">
             <div class="upsell-box">
                 <p>Opa! Antes de prosseguir, que tal uma<br>bebida para acompanhar?</p>
@@ -38,14 +36,11 @@
             </div>
         </section>
 
-        <!-- COLUNA DIREITA: carrinho + formulário -->
         <aside class="coluna-direita">
-
-            <!-- Carrinho -->
             <div class="painel">
                 <h2 class="painel-titulo">Carrinho</h2>
                 <ul class="carrinho-lista" id="carrinho-lista">
-                    <li class="carrinho-vazio" id="carrinho-vazio">Seu carrinho está vazio.</li>
+                    <li class="carrinho-vazio" id="carrinho-vazio">Seu carrinho esta vazio.</li>
                 </ul>
                 <div class="carrinho-linha-total">
                     <span>Total</span>
@@ -53,7 +48,6 @@
                 </div>
             </div>
 
-            <!-- Formulário -->
             <div class="painel">
                 <h2 class="painel-titulo">Finalizar</h2>
 
@@ -68,8 +62,33 @@
                 </div>
 
                 <div class="campo">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" placeholder="Digite aqui">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" placeholder="Digite o CEP" maxlength="9">
+                </div>
+
+                <div class="campo">
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" placeholder="Rua">
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Numero</label>
+                    <input type="text" id="numero" placeholder="Numero">
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" placeholder="Bairro">
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Cidade">
+                </div>
+
+                <div class="campo">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" placeholder="UF" maxlength="2">
                 </div>
 
                 <div class="campo">
@@ -78,8 +97,8 @@
                         <select id="pagamento">
                             <option value="" disabled selected>Escolha seu metodo</option>
                             <option value="pix">PIX</option>
-                            <option value="credito">Cartão de Crédito</option>
-                            <option value="debito">Cartão de Débito</option>
+                            <option value="credito">Cartao de Credito</option>
+                            <option value="debito">Cartao de Debito</option>
                             <option value="dinheiro">Dinheiro</option>
                         </select>
                     </div>
@@ -90,23 +109,20 @@
                     <input type="number" id="troco" placeholder="Ex: 100,00">
                 </div>
 
-                <button class="btn-finalizar" id="btn-finalizar">Finalizar Pedido 🛵</button>
+                <button class="btn-finalizar" id="btn-finalizar">Finalizar Pedido</button>
             </div>
-
         </aside>
     </main>
 
-    <!-- Modal de confirmação -->
     <div class="modal-overlay" id="modal" style="display:none;">
         <div class="modal-box">
-            <div class="modal-icone">✅</div>
+            <div class="modal-icone">OK</div>
             <h2>Pedido Enviado!</h2>
             <p id="modal-texto"></p>
             <button class="btn-modal-ok" id="btn-modal-ok">Fazer novo pedido</button>
         </div>
     </div>
 
-    <!-- Toast -->
     <div class="toast" id="toast"></div>
 
     <footer>
