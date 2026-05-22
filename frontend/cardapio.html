@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Brasa - Cardapio</title>
     <link rel="stylesheet" href="css/cardapio.css">
-
 </head>
 
 <body>
     <div id="header-placeholder"></div>
 
     <button class="cart-open-btn" id="floating-cart-btn">
-        CARRINHO 🛒 <span id="cart-count">0</span>
+        CARRINHO <span id="cart-count">0</span>
     </button>
 
     <aside id="cart-sidebar" class="cart-sidebar">
@@ -32,127 +31,17 @@
             <button class="checkout-btn">Finalizar Pedido</button>
         </div>
     </aside>
+
     <main class="hero-main">
         <div class="card">
             <h1 class="title-cardapio">CARDAPIO COMPLETO</h1>
             <hr>
-            <div class="card-content">
-                <section>
-                    <h2 class="sub-cardapio">TRADICIONAIS</h2>
-                    <div class="item-cardapio">
-                        <img src="imagens/pizza1.jpg" alt="Pizza de calabresa">
-                        <div class="info-produto">
-                            <h3>
-                                Pizza de Calabresa
-                            </h3>
-                            <p>Mussarela, calabresa fatiada e cebola.</p>
-                            <span class="preco-produto">R$ 45,50</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Pizza de Calabresa" data-preco="45.50">
-                            Pedir
-                        </button>
-                    </div>
-                    <div class="item-cardapio">
-                        <img src="imagens/pizza2.jpg" alt="Pizza de Frango">
-                        <div class="info-produto">
-                            <h3>
-                                Pizza de Frango com Catupiry
-                            </h3>
-                            <p>Mussarela, frango desfiado e catupiry.</p>
-                            <span class="preco-produto">R$ 47,00</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Pizza de Frango com Catupiry" data-preco="47.00">
-                            Pedir
-                        </button>
-                    </div>
-                    <div class="item-cardapio">
-                        <img src="imagens/pizza3.jpg" alt="Pizza Portuguesa">
-                        <div class="info-produto">
-                            <h3>
-                                Pizza Portuguesa
-                            </h3>
-                            <p>Mussarela, ovos cozidos, cebola, orégano e azeitonas.</p>
-                            <span class="preco-produto">R$ 48,00</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Pizza Portuguesa" data-preco="48.00">
-                            Pedir
-                        </button>
-                    </div>
-                </section>
-                <section>
-                    <h2 class="sub-cardapio">DOCES</h2>
-                    <div class="item-cardapio">
-                        <img src="imagens/pizza-chocolate.png" alt="Pizza de chocolate">
-                        <div class="info-produto">
-                            <h3>
-                                Pizza de Chocolate
-                            </h3>
-                            <p>Mussarela e chocolate derretido.</p>
-                            <span class="preco-produto">R$ 42,00</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Pizza de Chocolate" data-preco="42.00">
-                            Pedir
-                        </button>
-                    </div>
-                    <div class="item-cardapio">
-                        <img src="imagens/pizza-banana.png" alt="Pizza de banana">
-                        <div class="info-produto">
-                            <h3>
-                                Pizza de Banana
-                            </h3>
-                            <p>Mussarela, banana caramelizada e canela.</p>
-                            <span class="preco-produto">R$ 43,00</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Pizza de Banana" data-preco="43.00">
-                            Pedir
-                        </button>
-                    </div>
-                </section>
-                <section>
-                    <h2 class="sub-cardapio">BEBIDAS</h2>
-                    <div class="item-cardapio">
-                        <img src="imagens/cocacola.png" alt="Refrigerante - Cola">
-                        <div class="info-produto">
-                            <h3>
-                                Refrigerante - Cola
-                            </h3>
-                            <p>350ml</p>
-                            <span class="preco-produto">R$ 6,50</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Refrigerante - Cola" data-preco="6.50">
-                            Pedir
-                        </button>
-                    </div>
-                    <div class="item-cardapio">
-                        <img src="imagens/refri-laranja.png" alt="Refrigerante - Laranja">
-                        <div class="info-produto">
-                            <h3>
-                                Refrigerante - Laranja
-                            </h3>
-                            <p>350ml</p>
-                            <span class="preco-produto">R$ 6,50</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Refrigerante - Laranja" data-preco="6.50">
-                            Pedir
-                        </button>
-                    </div>
-                    <div class="item-cardapio">
-                        <img src="imagens/refri-guara.png" alt="Refrigerante - Guaraná">
-                        <div class="info-produto">
-                            <h3>
-                                Refrigerante - Guaraná
-                            </h3>
-                            <p>350ml</p>
-                            <span class="preco-produto">R$ 6,50</span>
-                        </div>
-                        <button class="bt-pedir" data-nome="Refrigerante - Guaraná" data-preco="6.50">
-                            Pedir
-                        </button>
-                    </div>
-                </section>
+            <div class="card-content" id="cardapio-container">
+                <p>Carregando cardapio...</p>
             </div>
         </div>
     </main>
+
     <footer>
         <p>La Brasa - Todos os direitos reservados</p>
     </footer>
