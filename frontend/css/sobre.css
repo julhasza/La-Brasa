@@ -45,9 +45,27 @@ body {
 
 .content-right p {
     font-size: 1rem;
-    line-height: 1;
+    line-height: 1.6;
     color: #ccc;
     margin-bottom: 30px;
+}
+
+.text-brasa {
+    color: #FF4400;
+}
+
+.link-botao-central {
+    display: inline-block;
+    background-color: #FF4400;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.link-botao-central:hover {
+    background-color: #b42a00;
 }
 
 .btn-pedido {

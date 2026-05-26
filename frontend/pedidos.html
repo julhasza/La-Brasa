@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Brasa - Pedidos</title>
+    <link rel="stylesheet" href="css/pedidos.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="pedidos-main">
+        <section class="pedidos-hero">
+            <div>
+                <p class="eyebrow">Painel do MVP</p>
+                <h1>Acompanhamento de pedidos</h1>
+                <p>Visualize os pedidos enviados pelo delivery e atualize o status para simular a operação da pizzaria.</p>
+            </div>
+            <button id="btn-atualizar" class="btn-atualizar">Atualizar lista</button>
+        </section>
+
+        <section class="resumo-grid" aria-label="Resumo dos pedidos">
+            <div class="resumo-card">
+                <span>Total</span>
+                <strong id="total-pedidos">0</strong>
+            </div>
+            <div class="resumo-card">
+                <span>Em aberto</span>
+                <strong id="pedidos-abertos">0</strong>
+            </div>
+            <div class="resumo-card">
+                <span>Entregues</span>
+                <strong id="pedidos-entregues">0</strong>
+            </div>
+        </section>
+
+        <section class="lista-pedidos" id="lista-pedidos">
+            <p class="estado-vazio">Carregando pedidos...</p>
+        </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <footer>
+        <p>La Brasa - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pedidos.js"></script>
+</body>
+
+</html>
