@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": 1779812919537,
+    "cliente": {
+      "nome": "Daniel Oliveira",
+      "whatsapp": "(45) 46461-265",
+      "endereco": "Rua Ferro Cardoso, 110 - Felipe Camarão, Natal - RN, CEP 59074-360"
+    },
+    "pagamento": {
+      "metodo": "pix",
+      "troco": null
+    },
+    "itens": [
+      {
+        "nome": "Pizza de Frango com Catupiry",
+        "preco": 47,
+        "qtd": 1
+      },
+      {
+        "nome": "Refrigerante - Cola",
+        "preco": 6.5,
+        "qtd": 1
+      },
+      {
+        "nome": "Refrigerante - Coca Cola",
+        "preco": 7,
+        "qtd": 1
+      }
+    ],
+    "total": 60.5,
+    "status": "novo",
+    "criadoEm": "2026-05-26T16:28:39.537Z"
+  }
+]
