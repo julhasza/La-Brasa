@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         carrinhoLista.innerHTML = '';
 
         if (carrinho.length === 0) {
+            localStorage.removeItem('labrasa_pedido');
             const li = document.createElement('li');
             li.className = 'carrinho-vazio';
             li.textContent = 'Seu carrinho esta vazio.';

@@ -12,6 +12,16 @@
     },
     "itens": [
       {
+        "nome": "Pizza de Calabresa",
+        "preco": 45.5,
+        "qtd": 1
+      },
+      {
+        "nome": "Pizza de Banana",
+        "preco": 43,
+        "qtd": 1
+      },
+      {
         "nome": "Pizza de Frango com Catupiry",
         "preco": 47,
         "qtd": 1
@@ -30,5 +40,11 @@
     "total": 60.5,
     "status": "novo",
     "criadoEm": "2026-05-26T16:28:39.537Z"
+      }
+    ],
+    "total": 142,
+    "status": "novo",
+    "criadoEm": "2026-05-22T20:43:49.910Z"
   }
+
 ]
