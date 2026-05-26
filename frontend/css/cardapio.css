@@ -66,6 +66,13 @@
     text-align: center;
 }
 
+.cardapio-intro {
+    max-width: 560px;
+    margin: 10px auto 0;
+    color: #d7d7d7;
+    text-align: center;
+}
+
 .card hr {
     border: 0;
     height: 1px;
@@ -426,7 +433,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* 1. Alinhamento no Menu (Nao afeta o layout do float mas mantem ele fora do fluxo) */
+/* 1. Alinhamento no menu */
 .cart-item-nav {
     display: flex;
     align-items: center;
@@ -493,4 +500,44 @@ footer {
     font-size: 0.9rem;
     font-weight: bold;
     border: 1px solid #ff4400;
+}
+
+@media (max-width: 760px) {
+    .hero-main {
+        padding: 210px 12px 32px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 24px 16px 30px;
+        border-radius: 8px;
+        max-height: none;
+    }
+
+    .card-content {
+        max-height: none;
+    }
+
+    .item-cardapio {
+        align-items: flex-start;
+        flex-direction: column;
+        border-radius: 8px;
+    }
+
+    .item-cardapio img {
+        width: 100%;
+        height: 180px;
+        border-radius: 8px;
+    }
+
+    .bt-pedir {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
 }

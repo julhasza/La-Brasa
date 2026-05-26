@@ -114,11 +114,37 @@ nav a:hover {
 
 .inicio {
     text-align: center;
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
 }
 
 .inicio h1 {
     font-size: 3em;
     color: #ffffff;
+    margin: 0;
+}
+
+.eyebrow {
+    color: #FF4400;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 10px;
+}
+
+.intro {
+    max-width: 680px;
+    margin: 18px auto 0;
+    color: #d6d6d6;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
 }
 
 .qualidades {
@@ -147,6 +173,20 @@ nav a:hover {
     width: 50px;
     height: 50px;
     object-fit: contain;
+}
+
+.qualidade-icone {
+    display: inline-flex;
+    width: 74px;
+    height: 74px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FF4400;
+    border-radius: 50%;
+    color: #FF4400;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .mais {
@@ -341,4 +381,40 @@ footer {
 
 .btn-cardapio:hover {
     background-color: #b42a00;
+}
+
+.btn-secundario {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 16px 34px;
+    border-radius: 50px;
+    border: 2px solid #FF4400;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background-color: rgba(255, 68, 0, 0.22);
+}
+
+@media (max-width: 760px) {
+    .inicio h1 {
+        font-size: 2.3em;
+    }
+
+    .qualidades ul {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .carrossel-container {
+        margin-top: 60px;
+        width: calc(100% - 24px);
+    }
+
+    .carrossel-slide img {
+        height: 280px;
+    }
 }

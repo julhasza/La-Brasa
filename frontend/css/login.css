@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonte-bebasneue/BebasNeue-Regular.woff2') format('woff2'),
+        url('../fonte-bebasneue/BebasNeue-Regular.woff') format('woff'),
+        url('../fonte-bebasneue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mollen';
+    src: url('../fonte-mollen/Mollen-Regular.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Mollen', sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.88), rgba(41, 16, 3, 0.94)),
+        url('../imagens/pizza1.jpg') center/cover fixed;
+}
+
+.login-page {
+    min-height: 100vh;
+    width: min(980px, calc(100% - 32px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 390px;
+    gap: 42px;
+    align-items: center;
+    padding: 48px 0;
+}
+
+.login-brand img {
+    width: 96px;
+    margin-bottom: 8px;
+}
+
+.login-brand h1 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+}
+
+.login-brand h1 span,
+.eyebrow {
+    color: #FF4400;
+}
+
+.login-brand p {
+    max-width: 520px;
+    color: #dddddd;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.auth-card {
+    background: #000000;
+    border: 1px solid rgba(255, 68, 0, 0.35);
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+.auth-card h2 {
+    margin: 0 0 24px;
+    font-size: 1.7rem;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    color: #d4d4d4;
+    font-weight: bold;
+    font-size: 0.92rem;
+}
+
+.campo input {
+    width: 100%;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    background: #171717;
+    color: #ffffff;
+    padding: 13px 14px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.campo input:focus {
+    border-color: #FF4400;
+}
+
+.cadastro-only {
+    display: none;
+}
+
+.modo-cadastro .cadastro-only {
+    display: block;
+}
+
+.btn-auth {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #FF4400;
+    color: #ffffff;
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+.btn-auth:hover {
+    background: #b42a00;
+}
+
+.auth-switch {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #cccccc;
+}
+
+.auth-switch button {
+    border: none;
+    background: transparent;
+    color: #FF4400;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Mollen', sans-serif;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%) translateY(100px);
+    background: #FF4400;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 11px 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 760px) {
+    .login-page {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 0;
+    }
+
+    .login-brand {
+        text-align: center;
+    }
+
+    .login-brand p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
