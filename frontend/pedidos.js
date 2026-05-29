@@ -1,5 +1,4 @@
-const PEDIDOS_API_BASE_URL = 'http://localhost:3001/api';
-
+const PEDIDOS_API_BASE_URL = 'https://la-brasa.onrender.com/api';
 document.addEventListener('DOMContentLoaded', () => {
     const listaPedidos = document.getElementById('lista-pedidos');
     const btnAtualizar = document.getElementById('btn-atualizar');
