@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('labrasa_pedido');
             const li = document.createElement('li');
             li.className = 'carrinho-vazio';
-            li.textContent = 'Seu carrinho esta vazio.';
+            li.textContent = 'Seu carrinho está vazio.';
             carrinhoLista.appendChild(li);
             totalValorEl.textContent = 'R$ 0,00';
             return;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (cep.length !== 8) {
-            mostrarToast('Digite um CEP com 8 numeros.');
+            mostrarToast('Digite um CEP com 8 números.');
             return;
         }
 
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!response.ok || dados.erro) {
                 limparEndereco();
-                mostrarToast('CEP nao encontrado.');
+                mostrarToast('CEP não encontrado.');
                 return;
             }
 
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Erro ao buscar CEP:', error);
             limparEndereco();
-            mostrarToast('Nao foi possivel buscar o CEP.');
+            mostrarToast('Não foi possível buscar o CEP.');
         }
     }
 
@@ -196,18 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const pagamento = selectPagamento.value;
 
         if (!nome) return mostrarToast('Informe seu nome.');
-        if (!whatsapp || whatsapp.replace(/\D/g, '').length < 10) return mostrarToast('Informe um WhatsApp valido.');
+        if (!whatsapp || whatsapp.replace(/\D/g, '').length < 10) return mostrarToast('Informe um WhatsApp válido.');
         if (!cep) return mostrarToast('Informe seu CEP.');
         if (!rua) return mostrarToast('Informe sua rua.');
-        if (!numero) return mostrarToast('Informe o numero.');
+        if (!numero) return mostrarToast('Informe o número.');
         if (!bairro) return mostrarToast('Informe o bairro.');
         if (!cidade) return mostrarToast('Informe a cidade.');
         if (!uf) return mostrarToast('Informe a UF.');
-        if (!pagamento) return mostrarToast('Escolha o metodo de pagamento.');
+        if (!pagamento) return mostrarToast('Escolha o método de pagamento.');
         if (carrinho.length === 0) return mostrarToast('Adicione pelo menos um item.');
 
         const temPizza = carrinho.some((item) => item.nome.toLowerCase().includes('pizza'));
-        if (!temPizza) return mostrarToast('Voce precisa incluir pelo menos uma pizza no pedido.');
+        if (!temPizza) return mostrarToast('Você precisa incluir pelo menos uma pizza no pedido.');
 
         let linhaTroco = '';
         let valorTroco = null;
@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const total = carrinho.reduce((acc, item) => acc + item.preco * item.qtd, 0);
         const pagLabels = {
             pix: 'PIX',
-            credito: 'Cartao de Credito',
-            debito: 'Cartao de Debito',
+            credito: 'Cartão de Crédito',
+            debito: 'Cartão de Débito',
             dinheiro: 'Dinheiro'
         };
 
@@ -258,11 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const resultado = await response.json();
             if (!response.ok) {
-                throw new Error(resultado.erro || 'Nao foi possivel enviar o pedido.');
+                throw new Error(resultado.erro || 'Não foi possível enviar o pedido.');
             }
         } catch (error) {
             console.error('Erro ao enviar pedido:', error);
-            return mostrarToast('Nao foi possivel enviar o pedido.');
+            return mostrarToast('Não foi possível enviar o pedido.');
         }
 
         modalTexto.innerHTML =

@@ -47,6 +47,17 @@ function loadHeader() {
                 }
             });
 
+            const authLink = document.getElementById('auth-link');
+            const usuarioLogado = localStorage.getItem('labrasa_usuario_logado');
+            if (authLink && usuarioLogado) {
+                authLink.textContent = 'Sair';
+                authLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    localStorage.removeItem('labrasa_usuario_logado');
+                    window.location.href = 'login.html';
+                });
+            }
+
             if (typeof atualizarInterface === 'function') {
                 atualizarInterface();
             }
@@ -87,6 +98,8 @@ function salvarCarrinho() {
 }
 
 function carregarCarrinho() {
+    if (!cartList) return;
+
     const pedidoSalvo = localStorage.getItem('labrasa_pedido');
     if (!pedidoSalvo) return;
 
@@ -128,6 +141,8 @@ function atualizarInterface() {
 }
 
 function criarItemCarrinho(nome, preco) {
+    if (!cartList) return;
+
     const li = document.createElement('li');
     li.classList.add('cart-item');
     li.innerHTML = `
@@ -245,7 +260,7 @@ async function carregarCardapio() {
     try {
         const response = await fetch(`${API_BASE_URL}/cardapio`);
         if (!response.ok) {
-            throw new Error('Falha ao buscar cardapio.');
+            throw new Error('Falha ao buscar cardápio.');
         }
 
         const categorias = await response.json();
@@ -258,8 +273,8 @@ async function carregarCardapio() {
 
         bindBotoesPedir();
     } catch (error) {
-        console.error('Erro ao carregar cardapio:', error);
-        cardapioContainer.innerHTML = '<p>Nao foi possivel carregar o cardapio agora.</p>';
+        console.error('Erro ao carregar cardápio:', error);
+        cardapioContainer.innerHTML = '<p>Não foi possível carregar o cardápio agora. Verifique se o backend está rodando.</p>';
     }
 }
 
