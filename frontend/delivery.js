@@ -1,5 +1,4 @@
-const DELIVERY_API_BASE_URL = 'http://localhost:3001/api';
-
+const DELIVERY_API_BASE_URL = 'https://la-brasa.onrender.com/api';
 document.addEventListener('DOMContentLoaded', () => {
     let carrinho = [];
 
